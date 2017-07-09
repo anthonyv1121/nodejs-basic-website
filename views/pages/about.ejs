@@ -1,0 +1,16 @@
+<%- contentFor('hero') %>
+
+    <h1>All About The About Page</h1>
+    <p>This is a template for your about page</p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Get at me! &raquo;</a></p>
+
+
+  <%- contentFor('body') %>
+  <div class="col-md-12">
+    <h2>The Team</h2>
+    <ul class="list-group">
+    <% for (user of users) { %>
+        <li class="list-group-item col-md-3"><%= user.name %>
+        <img src="<%= user.avatar %>" alt="" class="img-responsive"></li>
+    <% } %> </ul>
+  </div>
