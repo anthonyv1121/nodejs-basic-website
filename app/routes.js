@@ -1,14 +1,11 @@
 var express = require('express');
-var path = require('path'); // path helper - makes creating paths very simple - neede for large applications
-// create router object
+var path = require('path');
 var router = express.Router();
 
 module.exports = router;
 
 //Route router
 router.get('/', function(req, res){
-  //res.send('hello world!');
-  //res.sendFile(path.join(__dirname, '../index.html'));
   res.render('pages/home');
 })
 
@@ -27,6 +24,5 @@ router.get('/contact', function(req, res){
   res.render('pages/contact');
 })
 router.post('/contact', function(req, res){
-  //console.log(req.body.message);
   res.send("Thank you for contacting us, " +  req.body.name + "!");
 })
